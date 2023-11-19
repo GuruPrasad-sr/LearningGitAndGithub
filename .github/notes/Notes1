@@ -102,4 +102,7 @@ Important
 - Stashing Code
     Way to  put away the code temporarily so that we can work on something else . we can pull in those chages later
 
-    
+    git stash                   - stashes the changes
+        git stash list            -lists all stashes 
+        git stash apply <stash_number> - applies the stashs
+        git stash pop           - will give all those changes that are stashed in stash(0)
