@@ -116,3 +116,26 @@ Important
     -git clean -d # directories
     -git clean -f # force
 
+
+
+
+_______________________________________________________________________________________
+GITHUB
+
+-Creating new repository - in github
+
+
+-Pushing to Github
+ 
+    Adding REMOTE
+        git remote add NAME URL
+            git remote remove NAME
+            git rename OLDNAME NEWNAME
+            git remote -v
+
+    Git PUSH
+        git push REMOTE BRANCH
+            git push --set-upstream-to origin main
+            git push --all      -pushes all local branches to origin
+
+    
