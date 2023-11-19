@@ -1,0 +1,105 @@
+This is an untracked and ignored file 
+Given in git ignore folder
+
+Clearing the cache 
+-git rm -r --cached .
+
+ ---Deleting and renaming files
+
+1. Deleting  - manually deleting with mouse click
+    This will record the manually deleted operation as a function and we need to do -git commit , for it to be recorded.
+Restoring the file can be done with 
+- git restore <filename> or restore .
+
+2. Deleting with - git rm <filename>
+    Will delete the file and also update the wroking tree automatically 
+
+    This will save us from doing -git commit ,saving us one extra step
+     restoring from here - 2 step process
+
+        1. git restore -S . - to restore all staged changes
+        2. git restore <filename> - to restore the file  
+
+ ---Renaming the file
+ git mv <old-filename> <new-filename>
+
+
+BETTER WAY TO GIT LOG
+git log --oneline
+    gives the logs in oneline 
+    
+---DIFFERENCES
+git diff
+
+---CHANGING HISTORY
+ - git commit --amend 
+    this will open an editor where we can amend the git commit message
+
+
+RESETTING with git -to go to previus version for the working tree
+1.Safe reset command 
+git reset <commit_hash_code> 
+
+    this will UNSTAGE the chagnges of all commits after the the given hash code
+    this will not delete the chages - it will just rewind the commit and put in unstaged env.
+    we can again git add and commit those if we want
+
+2. unsafe and dangerous reset
+git reset --hard <commit_hash>
+
+    this will delete the changes and reset the current version of the project to a specfic commit history
+    No option of going back or no optoin of gettting changes back
+
+
+REBASING - another way of  changing history
+
+- works by taking commits from one branch -> and applying it to another branch
+git rebase <branch> or <commit>
+ 
+ options 
+    git rebase --interactive <branch>/<commit>
+    git rebase -i HEAD-#
+    git rebase -i --root 
+
+---BRANCHES
+
+git branch - shows all branches 
+git branch <name> - creates new branch
+git checkout or git switch <name> to switch to that branch
+
+--- MERGING 
+git merge <branch> 
+    this will take changes from <branch> and merge them into current branch
+
+    steps to have changes from new branch to master branch
+    go to main branch
+    git merge <new_dev_branch>
+    git log --oneline
+
+---DELETING
+--after fixing the feature - good to delete the fix branch
+git branch --delete <name>
+
+
+---------------------------
+----GIT FLOW----
+1.Feature/fix branch
+2.Make changes
+3.Merge to Master
+4.Delete old branch
+--------------------------- 
+
+---MERGE conflicts
+Two diiferent fixes by two different people for the same file at the same time can arise merge conflict
+
+to resolve this - we need to do -git pull , the changes that we want and choose what changes to keep - thereby having those changes everywhere
+
+
+
+----STASH AND CLEAN----
+Important
+
+- Stashing Code
+    Way to  put away the code temporarily so that we can work on something else . we can pull in those chages later
+
+    
