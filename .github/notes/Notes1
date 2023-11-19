@@ -106,3 +106,12 @@ Important
         git stash list            -lists all stashes 
         git stash apply <stash_number> - applies the stashs
         git stash pop           - will give all those changes that are stashed in stash(0)
+
+-git clean 
+    it lets us remove all untracked files and directories from working tree very quickly
+    -way of removing all files that we dont need anymore
+
+    git clean 
+    -git clean -n # dry run
+    -git clean -d # directories
+    -git clean -f # force
